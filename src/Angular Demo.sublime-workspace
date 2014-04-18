@@ -1,0 +1,589 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"div",
+				"div	Tag"
+			],
+			[
+				"roo",
+				"$rootScope	AngularJS"
+			],
+			[
+				"bs3",
+				"bs3-button	bs3-button"
+			],
+			[
+				"scipt",
+				"script-src	HTML/Snippet"
+			],
+			[
+				"script",
+				"script-src	HTML/Snippet"
+			],
+			[
+				"scri",
+				"script-src	HTML/Snippet"
+			],
+			[
+				"Scr",
+				"script-src	HTML/Snippet"
+			],
+			[
+				"margn",
+				"margin-top"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 180,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "register/register.html",
+			"settings":
+			{
+				"buffer_size": 5646,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 2748,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "register/register-controller.js",
+			"settings":
+			{
+				"buffer_size": 1037,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "session/sessions-controller.js",
+			"settings":
+			{
+				"buffer_size": 1555,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<div class=\"container\">\n	<h3>Session Schedule</h3>\n\n	<div class=\"row\">\n		<div class=\"col-md-8\">\n			<table class=\"table\">\n				<thead>\n					<th>Session</th>\n					<th>Format</th>\n					<th>Time</th>\n					<th>Location</th>\n				</thead>\n				<tbody>\n					\n				</tbody>\n			</table>\n		</div>\n	</div>\n</div>\n\n\n",
+			"file": "session/sessions.html",
+			"file_size": 287,
+			"file_write_time": 130420566491084254,
+			"settings":
+			{
+				"buffer_size": 300,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"angular",
+				"Snippet: Angular.js"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"bs3 col",
+				"Snippet: bs3-col-4"
+			],
+			[
+				"bs3",
+				"Snippet: bs3-row"
+			],
+			[
+				"bs3 form",
+				"Snippet: bs3-form-inline"
+			],
+			[
+				"pakage",
+				"Package Control: Install Package"
+			],
+			[
+				"make",
+				"SnippetMaker: Edit Snippet"
+			],
+			[
+				"glic",
+				"Snippet: glic_demo_angular_controller"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"demo controller",
+				"Snippet: angular_demo_controller_with_state"
+			],
+			[
+				"edit",
+				"SnippetMaker: Edit Snippet"
+			],
+			[
+				"main home",
+				"Snippet: Content for main home page for Angular JS demo"
+			],
+			[
+				"add state",
+				"Snippet: Angular_demo_add_state"
+			],
+			[
+				"demo add state",
+				"Snippet: Angular_demo_add_state"
+			],
+			[
+				"demo add config",
+				"Snippet: Angular_demo_add_app_config"
+			],
+			[
+				"main home demo",
+				"Snippet: Content for main home page for Angular JS demo"
+			],
+			[
+				"jumbotron dem",
+				"Snippet: Jumbotron for Angular JS demo"
+			],
+			[
+				"botstrap nav",
+				"Snippet: Bootstrap navbar for angular demo"
+			],
+			[
+				"bootstrap refer",
+				"Snippet: Bootstrap references from CDN for Angular JS demo"
+			],
+			[
+				"blank controller",
+				"Snippet: Blank controller for Angular JS demo"
+			],
+			[
+				"declare main",
+				"Snippet: angular_demo_declare_main_module"
+			],
+			[
+				"button",
+				"Snippet: bs3-button"
+			],
+			[
+				"snippet demo",
+				"Snippet: Blank controller for Angular JS demo"
+			],
+			[
+				"snippet navba",
+				"Snippet: Bootstrap navbar for angular demo"
+			],
+			[
+				"snipper demo",
+				"Snippet: Script references for Angular JS demo"
+			],
+			[
+				"snippet demo ",
+				"Snippet: Script references for Angular JS demo"
+			],
+			[
+				"jumbo",
+				"Snippet: bs3-jumbotron"
+			],
+			[
+				"demo",
+				"Snippet: Blank html5 page for AngularJS demo"
+			],
+			[
+				"api",
+				"API-Completion-Package: Settings – User"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"navbar",
+				"Snippet: Bootstrap navbar for angular demo"
+			],
+			[
+				"b3co",
+				"Snippet: bs3-col-4"
+			],
+			[
+				"bs3-row",
+				"Snippet: bs3-row"
+			],
+			[
+				"bs3-cont",
+				"Snippet: bs3-container"
+			],
+			[
+				"angulr",
+				"Snippet: Bootstrap navbar for angular demo"
+			]
+		],
+		"width": 472.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Prototypes/Angular Demo/home.html",
+		"/C/Users/berkj7b.GLIC/AppData/Roaming/Sublime Text 3/Packages/User/glic_demo_angular_controller.sublime-snippet",
+		"/C/Prototypes/Angular Demo/register/register.html",
+		"/C/Users/berkj7b.GLIC/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Prototypes/Angular Demo/register/register-controller.js",
+		"/C/Prototypes/Angular Demo/app.css",
+		"/C/Prototypes/Angular Demo/session/sessions-controller.js",
+		"/C/Prototypes/Angular Demo/home-controller.js",
+		"/C/Prototypes/Angular Demo/app.js",
+		"/C/Prototypes/Angular Demo/session/sessions.html",
+		"/C/Prototypes/Angular Demo/index.html",
+		"/C/Users/berkj7b/AppData/Roaming/Sublime Text 3/Packages/User/angular_demo_bootstrap_navbar.sublime-snippet",
+		"/C/Users/berkj7b/AppData/Roaming/Sublime Text 3/Packages/User/angular_demo_bootstrap_references.sublime-snippet",
+		"/C/Users/berkj7b/AppData/Roaming/Sublime Text 3/Packages/User/angular_demo_controller_with_state.sublime-snippet",
+		"/C/Users/berkj7b/AppData/Roaming/Sublime Text 3/Packages/User/angular_demo_declare_main_module.sublime-snippet",
+		"/C/Users/berkj7b/AppData/Roaming/Sublime Text 3/Packages/User/Angular_demo_blank_controller.sublime-snippet",
+		"/C/Users/berkj7b/AppData/Roaming/Sublime Text 3/Packages/User/Angular_demo_basic_html_with_controller.sublime-snippet",
+		"/C/Users/berkj7b/AppData/Roaming/Sublime Text 3/Packages/User/Angular_demo_add_state.sublime-snippet",
+		"/C/Users/berkj7b/AppData/Roaming/Sublime Text 3/Packages/User/Angular_demo_add_app_config.sublime-snippet",
+		"/C/Users/berkj7b/AppData/Roaming/Sublime Text 3/Packages/User/angular_demo_html5_blank_page.sublime-snippet",
+		"/C/Users/berkj7b/AppData/Roaming/Sublime Text 3/Packages/User/angular_demo_jumbotron.sublime-snippet",
+		"/C/Prototypes/Angular Demo/home/home.html",
+		"/C/Users/berkj7b/AppData/Roaming/Sublime Text 3/Packages/User/angular_demo_script_refereces.sublime-snippet",
+		"/C/Users/berkj7b/AppData/Roaming/Sublime Text 3/Packages/User/angular_demo_main_page_content.sublime-snippet",
+		"/C/Users/berkj7b/AppData/Roaming/Sublime Text 3/Packages/User/sublime-API-Completions-Package.sublime-settings",
+		"/C/Users/berkj7b/AppData/Roaming/Sublime Text 3/Packages/JavaScript and jQuery API Completions/sublime-API-Completions-Package.sublime-settings",
+		"/C/Users/berkj7b/AppData/Roaming/Sublime Text 3/Packages/Sublime-Better-Completion/sublime-API-Completions-Package.sublime-settings",
+		"/C/Users/berkj7b/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"register.html"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			">\n",
+			"col-md-3",
+			"col-md-4",
+			"col-md-4\n",
+			"\">\n",
+			"/>"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"col-md-4",
+			"col-md-2",
+			"2",
+			"col-md-3"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 180,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								178,
+								178
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "register/register.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5646,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5268,
+								5268
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1275.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2748,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1920,
+								1920
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "register/register-controller.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1037,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1023,
+								1023
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "session/sessions-controller.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1555,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1549,
+								1549
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "session/sessions.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								298,
+								298
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "Angular Demo.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

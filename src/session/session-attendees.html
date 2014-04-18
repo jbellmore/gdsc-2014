@@ -1,0 +1,32 @@
+<style type="text/css">
+	#session-attendees-container {
+		margin-top: 20px;
+	}	
+</style>
+
+<div id="session-attendees-container" class="container">
+
+<strong class="text-muted">Total # of attendees: {{attendees.length}}</strong>
+
+	<div class="row">
+		<div class="col-md-8">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Role</th>
+						<th>Business Unit</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="attendee in attendees">
+						<td>{{attendee.User.FirstName}} {{attendee.User.LastName}}</td>
+						<td>{{attendee.User.JobTitle}}</td>
+						<td>{{attendee.User.Location}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</div>

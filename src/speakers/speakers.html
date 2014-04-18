@@ -1,0 +1,50 @@
+<style type="text/css">
+	#speakers-container {
+		margin-top: 60px;
+	}
+
+		#speakers-container h3 {
+			margin-bottom: 20px;
+		}
+
+	.speakers-container {
+		margin-top: 20px;
+		margin-right: 20px;
+	}
+
+		.speaker-container .panel-heading {
+			font-weight: bold;
+			font-size: 1.1em;
+		}
+
+		.speaker-container .panel-body {
+			font-size: .9em;
+		}
+</style>
+
+<div id="speakers-container" class="container">
+
+	<h3>Thank you to all the speakers!</h3>
+
+	<div class="row container">
+		<div class="col-md-8">
+			<div ng-repeat="speaker in speakers" class="panel panel-default speaker-container row">
+				<div class="panel-heading">
+					<div class="col-md-4">{{speaker.User.FirstName}} {{speaker.User.LastName}}</div>
+					<div class="text-muted col-md-4">
+						<strong>{{speaker.User.JobTitle}}</strong> - {{speaker.User.Location}}
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="panel-body">
+					<strong>Bio</strong><br />
+					{{speaker.User.Bio}}
+					<br />
+					<br />
+					<strong>Interests</strong><br />
+					{{speaker.User.Interests}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

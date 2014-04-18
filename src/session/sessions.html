@@ -1,0 +1,40 @@
+<style type="text/css">
+	#session-container {
+		margin-top: 50px;
+	}
+
+	.table-hover tr {
+		cursor: pointer;
+	}
+</style>
+
+<div id="session-container" class="container">
+	<h3>Sessions <small class="text-muted"> - Click a topic for details / sign up</small></h3>
+
+	<div class="row">
+		<div class="col-md-8">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Topic</th>
+						<th>Format</th>
+						<th>Date</th>
+						<th>Time</th>
+						<th>Location</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="session in sessions" ng-click="sessionClicked(session)" class="text-primary">
+						<td>{{session.Name}}</td>
+						<td>{{session.Format.Description}}</td>
+						<td>{{session.StartTime | date:'EEEE'}} {{session.StartTime | date:'shortDate'}}</td>
+						<td>{{session.StartTime | date:'shortTime'}} - {{session.FinishTime | date:'shortTime'}}</td>
+						<td>{{session.Location}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+
