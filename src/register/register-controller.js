@@ -2,7 +2,7 @@ var app = angular.module('myApp');
 
 app.config(function ($stateProvider) {
     	$stateProvider.state('register', {
-		url: "register",
+		url: "/register",
 		templateUrl: "register/register.html",
 		controller: 'registerController'
 	});
