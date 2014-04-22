@@ -1,5 +1,9 @@
 body {
-	/*padding: 20px;*/
+        padding-bottom: 20px;
+    }
+a {
+    text-decoration: none  !important;
+    cursor:pointer;
 }
 
 .jumbotron {
@@ -15,3 +19,21 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+.superscript {
+    font-size: xx-small;
+    vertical-align: text-top;
+}
+#register-container {
+		margin-top: 40px;
+	}
+
+	.form-control-feedback {
+		margin-right: 10px;
+	}
+
+	.alert-info a {
+		font-weight: bold;
+	}
+
+
+

@@ -1,22 +1,8 @@
-<style type="text/css">
-	#register-container {
-		margin-top: 80px;
-	}
 
-	.form-control-feedback {
-		margin-right: 10px;
-	}
-
-	.alert-info a {
-		font-weight: bold;
-	}
-</style>
 <div id="register-container" class="container">
-
+    <h2>2014 Guardian Software Developer Conference Registration</h2>
+    <br />
 	<form name="registerForm" method="POST" role="form" novalidate>
-
-		<legend>Conference Registration</legend>
-
 		<div class="row">
 			<div class="col-md-3">
 			
@@ -71,12 +57,13 @@
 						<option>Business Analyst</option>
 						<option>Database Administrator</option>
 						<option>Developer</option>
-						<option>Executive</option>
+						<option>Director</option>
 						<option>Network Engineer</option>
 						<option>Project Manager</option>
 						<option>System Administrator</option>
 						<option>Technical Manager</option>
 						<option>Test Engineer</option>
+						<option>VP</option>
 						<option>Other</option>
 					</select>
 					<span ng-show=" showValidation && !registerForm.role.$invalid"
@@ -88,13 +75,13 @@
 		</div>
 
 		<div class="row">
-			<div class="col-md-7">
+			<div class="col-md-3">
 				<div class="form-group has-feedback"
 					ng-class="{ 'has-success': showValidation &&!registerForm.businessUnit.$invalid, 'has-error': showValidation && registerForm.businessUnit.$invalid }">
-					<label for="businessUnit">Business Unit</label>
+					<label for="businessUnit">BTS</label>
 					<select type="text" ng-model="user.Location" required
 						class="form-control" name="businessUnit" placeholder="Enter the business unit you work for">
-						<option value="">Select the business unit you work for</option>
+						<option value="">Select your BTS</option>
 						<option>Corporate</option>
 						<option>Disability</option>
 						<option>Distribution</option>
@@ -112,25 +99,16 @@
 						class="glyphicon glyphicon-remove form-control-feedback"></span>
 				</div>
 			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-7">
-				<div class="form-group">
-					<label for="interests">What do you hope to get out of the conference? (Optional)</label>
-					<textarea ng-model="user.Interests"
-						id="interests" rows="5" class="form-control" id="interests">
-					</textarea>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-7">
-				<div class="alert alert-info">
-					For any questions or if you experience any problems, <a href="mailto:{{contactEmail}}"">click here to contact the organizers</a>!
-				</div>
-			</div>
+            <div class="col-md-4">
+                <div class="form-group">
+                   <label for="attendDay">I will attend</label><br />
+                        <div style="margin-top:5px">
+                        <label><input ng-model="attendDay" value="Day-1" type="radio" name="attend-days">&nbsp;Day-1 </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label><input ng-model="attendDay" value="Day-2" type="radio" name="attend-days" />&nbsp;Day-2 </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label><input ng-model="attendDay" value="Both"  type="radio" name="attend-days" ng-checked="true">&nbsp;Both Days </label> 
+                        </div>
+                 </div>
+            </div>
 		</div>
 
 		<div class="row">
@@ -148,8 +126,8 @@
 	
 		<div class="row">
 			<div class="col-md-6 text-center">
-				<button ng-click="registerUser(user, registerForm.$valid)"
-					type="submit" class="btn btn-primary text-center">Submit</button>
+				<button ng-hide="showSuccess" ng-click="registerUser(user, registerForm.$valid)"
+					type="submit" class="btn btn-primary btn-lg" style="width:160px">Submit</button>
 			</div>
 		</div>
 	</form>

@@ -12,13 +12,9 @@
     <p>
         Participation is open to all IT roles at all levels.
     </p>
-    <p>
-        All GL software systems professionals welcome, COTS integration folks too. This is not a technology stack specific event.
-    </p>
+  
     <strong class="text-primary">
-        <a href="https://www.yammer.com/glic.com/#/threads/inGroup?type=in_group&feedId=4219962" target="blank">
-            <i class="fa fa-comment"></i> Come join the discussion about the conference in the First Annual Software Developer Conference group in Yammer!
-        </a>
+          <i class="fa fa-comment"></i><a href="https://www.yammer.com/glic.com/#/threads/inGroup?type=in_group&feedId=4219962" target="blank"> Comments welcome in Yammer!</a>
     </strong>
     <br />
     <br />
@@ -26,35 +22,44 @@
   </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <h3>
-                <a href ui-sref="speakers">
-                    <i class="fa fa-user"></i> Speakers
-                </a>
-            </h3>
-            <p>
-                The Guardian technology conference features speakers from within various organizations within the Guardian
-                enterprise as well as other industry experts.
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h3>
-                <a href ui-sref="sessions">
-                    <i class="fa fa-comments"></i> Sessions</h3>
-                </a>
-            <p>
-                Sessions will cover a wide range of technology topics that would be of interest for all Guardian IT professionals.
-                Speakers will cover topics that pertain to developing applications within the Guardian environment.
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h3 class="text-muted">
-                <i class="fa fa-info-circle"></i> Conference Details</h3>
-            <p>
-                The conference will take place on the 15th floor of the Guardian home office at Hannover Square - New York, NY. The date for the conference will be May 7th & 8th.
-            </p>
-        </div>
-    </div>
+<div id="session-container" class="container">
+	<h3>Conference Schedule</h3>
+	<table class="table">
+		<thead>
+			<tr>
+                <th></th>
+				<th>Topic</th>
+                <th>Speaker/Facilitator</th>
+				<th>Date</th>
+				<th>Time</th>						
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="session in sessions" ng-mouseover="initializeModals()">
+                <td style="cursor: default">
+                    <img src="icons/icon_lecture.png" data-toggle="popover" data-placement="top" data-trigger="hover"
+                        data-content="{{session.Format.Description}}" ng-if="session.Format.Id == 1"/>
+                    <img src="icons/icon_conference.jpg" data-toggle="popover" data-placement="top" data-trigger="hover"
+                        data-content="{{session.Format.Description}}" ng-if="session.Format.Id != 1" />
+                </td>
+				<td>
+                    <span style="cursor: default;" data-placement="top" data-content="{{session.Description}}" data-toggle="popover" data-trigger="hover">{{session.Name}}</span>
+                </td>
+                <td>
+                    <div ng-if="session.Speakers.length == 0 && session.Leaders == null">TBD</div>
+                    <div ng-if="session.Speakers.length == 0 && session.Leaders">{{session.Leaders}}</div>
+                    <div ng-if="session.Speakers" style="cursor: default;" ng-repeat="speaker in session.Speakers">
+                        <span ng-if="$index > 0">&</span>
+                        <span data-placement="top"
+                        data-content="{{getSpeakerTooltipText(speaker)}}" data-toggle="popover" data-trigger="hover">
+                            {{speaker.User.FirstName}} {{speaker.User.LastName}}
+                        </span>
+                        <span ng-if="speaker.User.Location"> - {{speaker.User.Location}}</span>
+                    </div>
+                </td>
+				<td>{{session.StartTime | date:'MMM d'}}<span class="superscript">th</span></td>
+				<td>{{session.StartTime | date:'shortTime'}} - {{session.FinishTime | date:'shortTime'}}</td>						
+			</tr>
+		</tbody>
+	</table>	
 </div>
