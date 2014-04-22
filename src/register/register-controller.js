@@ -15,6 +15,11 @@ app.controller('registerController', function ($scope, $rootScope, $http, $windo
 	$scope.showSuccess = false;
 	$scope.errorMessage = "";
 
+	self.resetUser = function() {
+		$scope.user = {};
+		$scope.user.attendDay = "Both";
+	};
+
 	$scope.populateEmail = function() {
 		if(!angular.isUndefined($scope.user.FirstName) && $scope.user.FirstName.length > 0
 			&& !angular.isUndefined($scope.user.LastName)&& $scope.user.LastName.length > 0) {
@@ -41,8 +46,8 @@ app.controller('registerController', function ($scope, $rootScope, $http, $windo
 				  break;
 				case "Day-2":
 				  user.AttendingFirstDay = false;
-				  user.AttendingSecondDay = false;
-				  user.AttendingBothDays  = true;
+				  user.AttendingSecondDay = true;
+				  user.AttendingBothDays  = false;
 				  break;
 			  case "Both":
 				  user.AttendingFirstDay = true;
@@ -59,7 +64,7 @@ app.controller('registerController', function ($scope, $rootScope, $http, $windo
 			$http({method: 'put', url: url, data: user})
 			    .success(function(data, status, headers, config) {
 			    	//$rootScope.loginUser(user.EmailAddress);
-			    	$scope.user = {};
+			    	self.resetUser();
 		      		$scope.showSuccess = true;
 			    })
 			    .error(function(data, status, headers, config) {
@@ -70,5 +75,7 @@ app.controller('registerController', function ($scope, $rootScope, $http, $windo
 	};
 
 	$window.scrollTo(0,0);
+
+	self.resetUser();
 
 });
