@@ -54,7 +54,6 @@
                         data-content="{{getSpeakerTooltipText(speaker)}}" data-toggle="popover" data-trigger="hover">
                             {{speaker.User.FirstName}} {{speaker.User.LastName}}
                         </span>
-                        <span ng-if="speaker.User.Location"> - {{speaker.User.Location}}</span>
                     </div>
                 </td>
 				<td>{{session.StartTime | date:'MMM d'}}<span class="superscript">th</span></td>
