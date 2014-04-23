@@ -71,6 +71,29 @@ app.controller('homeController', function ($scope, $state, $http, $rootScope) {
         return "";
     };
 
+    $scope.getFormatIcon = function(formatId) {
+        switch(formatId) {
+            case 11:
+              return "fa-coffee";
+            case 1:
+              return "fa-user";
+            case 6:
+              return "fa-wrench";
+            case 9:
+              return "fa-cutlery";
+            case 4:
+              return "fa-info-circle";
+            case 2:
+              return "fa-group";
+            case 3:
+              return "fa-key";
+            case 5:
+              return "fa-video-camera";
+            default:
+              return "";
+        }
+    };
+
     self.loadSpeakers();
     self.loadSessions();
 });

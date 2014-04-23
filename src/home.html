@@ -37,24 +37,29 @@
 		<tbody>
 			<tr ng-repeat="session in sessions" ng-mouseover="initializeModals()">
                 <td style="cursor: default">
-                    <img src="icons/icon_lecture.png" data-toggle="popover" data-placement="top" data-trigger="hover"
-                        data-content="{{session.Format.Description}}" ng-if="session.Format.Id == 1"/>
-                    <img src="icons/icon_conference.jpg" data-toggle="popover" data-placement="top" data-trigger="hover"
-                        data-content="{{session.Format.Description}}" ng-if="session.Format.Id != 1" />
+                    <div style="cursor: pointer; font-size: 1.3em; margin-top: -3px;" data-toggle="popover" data-placement="top" data-trigger="hover"
+                        data-content="{{session.Format.Description}}">
+                        <i class="fa {{getFormatIcon(session.Format.Id)}}"></i> 
+                    </div>
                 </td>
 				<td>
-                    <span style="cursor: default;" data-placement="top" data-content="{{session.Description}}" data-toggle="popover" data-trigger="hover">{{session.Name}}</span>
+                    <a href class="hidden-xs hidden-sm" style="cursor: pointer; vertical-align: center;" data-placement="top" data-content="{{session.Description}}" data-toggle="popover" data-trigger="hover">{{session.Name}}</a>
+                    <a href class="hidden-md hidden-lg" data-placement="top" data-content="{{session.Description}}" data-toggle="popover" data-trigger="click">{{session.Name}}</a>
                 </td>
                 <td>
                     <div ng-if="session.Speakers.length == 0 && session.Leaders == null">TBD</div>
                     <div ng-if="session.Speakers.length == 0 && session.Leaders">{{session.Leaders}}</div>
-                    <div ng-if="session.Speakers" style="cursor: default;" ng-repeat="speaker in session.Speakers">
+                    <span href ng-if="session.Speakers" style="cursor: default;" ng-repeat="speaker in session.Speakers">
                         <span ng-if="$index > 0">&</span>
-                        <span data-placement="top"
-                        data-content="{{getSpeakerTooltipText(speaker)}}" data-toggle="popover" data-trigger="hover">
+                        <a href class="hidden-xs hidden-sm" style="cursor: pointer;" data-placement="top"
+                            data-content="{{getSpeakerTooltipText(speaker)}}" data-toggle="popover" data-trigger="hover">
                             {{speaker.User.FirstName}} {{speaker.User.LastName}}
-                        </span>
-                    </div>
+                        </a>
+                        <a href class="hidden-md hidden-lg" data-placement="top"
+                            data-content="{{getSpeakerTooltipText(speaker)}}" data-toggle="popover" data-trigger="click">
+                            {{speaker.User.FirstName}} {{speaker.User.LastName}}
+                        </a>
+                    </span>
                 </td>
 				<td>{{session.StartTime | date:'MMM d'}}<span class="superscript">th</span></td>
 				<td>{{session.StartTime | date:'shortTime'}} - {{session.FinishTime | date:'shortTime'}}</td>						
@@ -62,3 +67,16 @@
 		</tbody>
 	</table>	
 </div>
+
+<script type="text/javascript">
+    // Temporary hack to close tooltips when something else is clicked
+    $('body').on('click', function (e) {
+    $('[data-toggle="popover"]').each(function () {
+        //the 'is' for buttons that trigger popups
+        //the 'has' for icons within a button that triggers a popup
+        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+            $(this).popover('hide');
+        }
+    });
+});
+</script>
