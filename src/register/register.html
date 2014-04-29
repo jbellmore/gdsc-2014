@@ -2,14 +2,18 @@
 <div id="register-container" class="container">
     <h2>2014 Guardian Software Developer Conference Registration</h2>
     <br />
+
 	<form name="registerForm" method="POST" role="form" novalidate>
+	<div class="row">
+	<p class="col-md-7 alert alert-info">Thank you for your interest. Unfortunately, this event is now over-subscribed. There are no seats available at this time. Please follow Yammer for details on Webcasting from the conference</p>
+	</div>
 		<div class="row">
 			<div class="col-md-3">
 			
 				<div class="form-group has-feedback"
 					ng-class="{ 'has-success': showValidation && !registerForm.firstName.$invalid, 'has-error': showValidation && registerForm.firstName.$invalid }">
 					<label for="firstName">First Name</label>
-					<input type="text" ng-model="user.FirstName" required
+					<input ng-disabled="true" type="text" ng-model="user.FirstName" required
 						ng-change="populateEmail()"
 						class="form-control" name="firstName" placeholder="First Name">
 					<span ng-show="showValidation && !registerForm.firstName.$invalid"
@@ -23,7 +27,7 @@
 				<div class="form-group has-feedback"
 					ng-class="{ 'has-success': showValidation &&!registerForm.lastName.$invalid, 'has-error': showValidation && registerForm.lastName.$invalid }">
 					<label for="lastName">Last Name</label>
-					<input type="text" ng-model="user.LastName" required
+					<input ng-disabled="true" type="text" ng-model="user.LastName" required
 						ng-change="populateEmail()"
 						class="form-control" name="lastName" placeholder="Last Name">
 					<span ng-show="showValidation && !registerForm.lastName.$invalid"
@@ -39,7 +43,7 @@
 				<div class="form-group has-feedback"
 					ng-class="{ 'has-success': showValidation && !registerForm.email.$invalid, 'has-error': showValidation && registerForm.email.$invalid }">
 					<label for="email">E-mail</label>
-					<input type="email" ng-model="user.EmailAddress" required
+					<input ng-disabled="true" type="email" ng-model="user.EmailAddress" required
 						class="form-control" name="email" placeholder="your-email@glic.com">
 					<span ng-show="showValidation && !registerForm.email.$invalid" class="glyphicon glyphicon-ok form-control-feedback"></span>
 					<span ng-show="showValidation && registerForm.email.$invalid" class="glyphicon glyphicon-remove form-control-feedback"></span>
@@ -50,7 +54,7 @@
 				<div class="form-group has-feedback"
 					ng-class="{ 'has-success': showValidation && !registerForm.role.$invalid, 'has-error': showValidation && registerForm.role.$invalid }">
 					<label for="role">Role</label>
-					<select type="text" ng-model="user.JobTitle" required
+					<select ng-disabled="true" type="text" ng-model="user.JobTitle" required
 						class="form-control" name="role" placeholder="Enter your role within Guardian">
 						<option value="">Select your role</option>
 						<option>Architect</option>
@@ -79,7 +83,7 @@
 				<div class="form-group has-feedback"
 					ng-class="{ 'has-success': showValidation &&!registerForm.businessUnit.$invalid, 'has-error': showValidation && registerForm.businessUnit.$invalid }">
 					<label for="businessUnit">BTS</label>
-					<select type="text" ng-model="user.Location" required
+					<select ng-disabled="true" type="text" ng-model="user.Location" required
 						class="form-control" name="businessUnit" placeholder="Enter the business unit you work for">
 						<option value="">Select your BTS</option>
 						<option>Corporate</option>
@@ -103,9 +107,9 @@
                 <div class="form-group">
                    <label for="attendDay">I will attend</label><br />
                         <div style="margin-top:5px">
-	                        <label><input ng-model="user.attendDay" value="Day-1" type="radio">&nbsp;Day-1 </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	                        <label><input ng-model="user.attendDay" value="Day-2" type="radio"/>&nbsp;Day-2 </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	                        <label><input ng-model="user.attendDay" value="Both"  type="radio">&nbsp;Both Days</label>
+	                        <label><input ng-disabled="true" ng-model="user.attendDay" value="Day-1" type="radio">&nbsp;Day-1 </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	                        <label><input ng-disabled="true" ng-model="user.attendDay" value="Day-2" type="radio"/>&nbsp;Day-2 </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	                        <label><input ng-disabled="true" ng-model="user.attendDay" value="Both"  type="radio">&nbsp;Both Days</label>
                         </div>
                  </div>
             </div>
@@ -115,7 +119,7 @@
 			<div class="col-md-7">
 				<div ng-show="showSuccess" class="alert alert-success">
 					Registration successful, you should receive a confirmation e-mail shortly.
-					<button ng-click="showSuccess = false" type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<button ng-disabled="true" ng-click="showSuccess = false" type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 				</div>
 				<div ng-show="errorMessage" class="alert alert-danger">
 					{{errorMessage}}
@@ -126,8 +130,8 @@
 	
 		<div class="row">
 			<div class="col-md-6 text-center">
-				<button ng-hide="showSuccess" ng-click="registerUser(user, registerForm.$valid)"
-					type="submit" class="btn btn-primary btn-lg" style="width:160px">Submit</button>
+				<button ng-disabled="true" ng-hide="showSuccess" ng-click="registerUser(user, registerForm.$valid)"
+					type="submit" class="btn btn-primary btn-disabled btn-lg" style="width:160px">Submit</button>
 			</div>
 		</div>
 	</form>

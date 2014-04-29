@@ -6,6 +6,11 @@ app.run(function ($rootScope, $state, $cookieStore, $http) {
              return "http://glic.azurewebsites.net/api/v1/";
      };
 
+     if($cookieStore.get('hasShownNotice') == null) {
+        $('#noticeDialog').modal('show');
+        $cookieStore.put('hasShownNotice', true);
+     }
+
 	$rootScope.$state = $state;
 });
 
